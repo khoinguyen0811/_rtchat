@@ -277,7 +277,7 @@ npm run build
 
 ## 📸 Screenshots
 
-> *(Thêm ảnh chụp màn hình vào đây)*
+>
 
 ---
 
