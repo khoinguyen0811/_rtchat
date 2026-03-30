@@ -1,0 +1,31 @@
+{
+	"name": "frontend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"dependencies": {
+		"@kurkle/color": "^0.4.0",
+		"@shoelace-style/shoelace": "^2.20.1",
+		"axios": "^1.13.2",
+		"chart.js": "^4.5.1",
+		"emoji-picker-element": "^1.28.1",
+		"socket.io-client": "^4.8.3",
+		"zod": "^4.3.5",
+		"zustand": "^5.0.9"
+	},
+	"devDependencies": {
+		"@types/socket.io-client": "^1.4.36",
+		"typescript": "^5.9.3",
+		"vite": "^7.3.1"
+	}
+}

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Về ChatZ | Kết nối không giới hạn</title>
+		<!-- Remix Icons -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Landing CSS -->
+		<link rel="stylesheet" href="src/assets/css/landing.css" />
+		<link rel="stylesheet" href="src/assets/css/about.css" />
+	</head>
+	<body>
+		<!-- Circles Background -->
+		<div class="circle circle-1"></div>
+		<div class="circle circle-2"></div>
+
+		<nav class="navbar">
+			<a href="index.html" class="logo">
+				<i class="ri-chat-voice-fill"></i>
+				Chat<span>Z</span>
+			</a>
+			<div class="nav-links">
+				<a href="index.html#features">Tính năng</a>
+				<a href="about.html">Giới thiệu</a>
+				<a href="index.html#download">Tải ứng dụng</a>
+			</div>
+			<div class="nav-actions">
+				<button
+					id="theme-toggle-btn"
+					class="theme-toggle"
+					aria-label="Chuyển đổi chế độ Sáng/Tối"
+				>
+					<i id="theme-icon" class="ri-moon-line"></i>
+				</button>
+				<div
+					aria-label="Nút Đăng nhập"
+					tabindex="0"
+					role="button"
+					class="user-profile"
+				>
+					<a href="src/pages/client/auth-login.html" class="user-profile-inner">
+						<svg
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+						>
+							<g data-name="Layer 2" id="Layer_2">
+								<path
+									d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z"
+								></path>
+							</g>
+						</svg>
+						<p>Đăng ký</p>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Section 1: Hero -->
+		<section class="about-hero">
+			<h1>Câu chuyện của ChatZ</h1>
+			<p>
+				Chúng tôi tin rằng giao tiếp là chìa khóa của mọi mối quan hệ. ChatZ ra
+				đời với sứ mệnh mang lại sự kết nối liền mạch, an toàn và thú vị cho mọi
+				người.
+			</p>
+		</section>
+
+		<!-- Section 2: Mission -->
+		<section class="mission-section">
+			<div class="mission-content">
+				<div class="hero-badge">Sứ mệnh của chúng tôi</div>
+				<h2>Kết nối thế giới, không khoảng cách</h2>
+				<p
+					style="
+						color: var(--text-muted);
+						margin-top: 1rem;
+						margin-bottom: 2rem;
+					"
+				>
+					Tại ChatZ, chúng tôi xây dựng nhiều hơn là một ứng dụng nhắn tin.
+					Chúng tôi xây dựng những cây cầu nối giữa con người với con người. Dù
+					bạn ở bất cứ đâu, ChatZ giúp bạn cảm thấy gần gũi hơn với những người
+					thân yêu.
+				</p>
+				<p style="color: var(--text-muted)">
+					Với công nghệ mã hóa đầu cuối tiên tiến, quyền riêng tư của bạn luôn
+					được đảm bảo. Chúng tôi không chỉ cung cấp công cụ, chúng tôi cung cấp
+					sự an tâm.
+				</p>
+			</div>
+			<div class="mission-image">
+				<img
+					src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+					alt="Team discussion"
+				/>
+			</div>
+		</section>
+
+		<!-- Section 3: Values -->
+		<section class="values-section">
+			<div class="section-header">
+				<h2>Giá trị cốt lõi</h2>
+				<p style="color: var(--text-muted)">Những điều định hình nên ChatZ</p>
+			</div>
+			<div class="values-grid">
+				<div class="value-card">
+					<div class="value-icon">
+						<i class="ri-shield-keyhole-line"></i>
+					</div>
+					<h3>Quyền riêng tư</h3>
+					<p>Bảo mật không phải là tính năng, đó là lời hứa của chúng tôi.</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">
+						<i class="ri-rocket-line"></i>
+					</div>
+					<h3>Tốc độ & Đổi mới</h3>
+					<p>
+						Không ngừng cải tiến để mang lại trải nghiệm nhanh nhất, mượt nhất.
+					</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">
+						<i class="ri-heart-line"></i>
+					</div>
+					<h3>Người dùng là trên hết</h3>
+					<p>
+						Mọi quyết định của chúng tôi đều bắt đầu từ trải nghiệm của bạn.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-col">
+					<a href="#" class="logo mb-4">
+						<i class="ri-chat-voice-fill"></i>
+						Chat<span>Z</span>
+					</a>
+					<p class="footer-desc">
+						ChatZ là tương lai của giao tiếp an toàn và liền mạch. Kết nối với
+						bất kỳ ai, ở đâu, vào bất kỳ lúc nào mà không ảnh hưởng đến quyền
+						riêng tư của bạn.
+					</p>
+					<div class="social-links">
+						<a href="#"><i class="ri-facebook-fill"></i></a>
+						<a href="#"><i class="ri-twitter-fill"></i></a>
+						<a href="#"><i class="ri-instagram-fill"></i></a>
+						<a href="#"><i class="ri-linkedin-fill"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-col">
+					<h4>Sản phẩm</h4>
+					<ul>
+						<li><a href="index.html#features">Tính năng</a></li>
+						<li><a href="index.html#live-demo">Xem trước</a></li>
+						<li><a href="#">Chat trên Web</a></li>
+						<li><a href="#">Bảo mật & Riêng tư</a></li>
+						<li><a href="#">Dành cho Doanh nghiệp</a></li>
+						<li><a href="#">Tích hợp API</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Hỗ trợ</h4>
+					<ul>
+						<li><a href="#">Trung tâm trợ giúp</a></li>
+						<li><a href="#">Báo cáo sự cố</a></li>
+						<li><a href="#">Tài khoản của tôi</a></li>
+						<li><a href="#">Quên mật khẩu</a></li>
+						<li><a href="#">Trạng thái hệ thống</a></li>
+						<li><a href="#">Liên hệ hỗ trợ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Công ty</h4>
+					<ul>
+						<li><a href="about.html">Về chúng tôi</a></li>
+						<li><a href="#">Nghề nghiệp</a></li>
+						<li><a href="#">Blog tin tức</a></li>
+						<li><a href="#">Đối tác</a></li>
+						<li><a href="#">Chính sách quyền riêng tư</a></li>
+						<li><a href="#">Điều khoản dịch vụ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col contact-col">
+					<h4>Giữ liên lạc</h4>
+					<p class="footer-text-sm">
+						Đăng ký để nhận tin tức cập nhật mới nhất từ ChatZ.
+					</p>
+					<form class="footer-newsletter">
+						<input type="email" placeholder="Email của bạn..." required />
+						<button type="submit"><i class="ri-send-plane-fill"></i></button>
+					</form>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					&copy; 2026 ChatZ. Đã đăng ký bản quyền. Thiết kế với
+					<i class="ri-heart-fill" style="color: #f84646"></i> bởi Team ChatZ.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Theme Logic -->
+		<script type="module" src="/src/modules/landing.ts"></script>
+	</body>
+</html>

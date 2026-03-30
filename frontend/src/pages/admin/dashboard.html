@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Chatz | Admin Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../../../assets/images/favicon.ico" />
+
+		<!-- Bootstrap Css -->
+		<link
+			href="../../../assets/css/bootstrap.min.css"
+			id="bootstrap-style"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<!-- Icons Css -->
+		<link
+			href="../../../assets/css/icons.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"
+			rel="stylesheet"
+		/>
+		<!-- App Css-->
+		<link
+			href="../../../assets/css/app.min.css"
+			id="app-style"
+			rel="stylesheet"
+			type="text/css"
+		/>
+	</head>
+
+	<body>
+		<div class="layout-wrapper d-flex">
+			<!-- Sidebar -->
+			<div class="admin-sidebar">
+				<div class="px-4 mb-4">
+					<a
+						href="../client/home.html"
+						class="d-flex align-items-center gap-2 text-center mt-2"
+					>
+						<img
+							src="../../../assets/images/logo.svg"
+							alt=""
+							height="30"
+							class="auth-logo-dark"
+						/>
+						<span class="fs-4">Chatz</span>
+					</a>
+				</div>
+
+				<ul class="nav flex-column ps-3 pe-3">
+					<li class="nav-item mb-1">
+						<a
+							class="nav-link active rounded pb-2 pt-2"
+							href="#"
+							data-target="dashboard"
+						>
+							<i class="ri-dashboard-line me-2 align-middle"></i> Dashboard
+						</a>
+					</li>
+					<li class="nav-item mb-1">
+						<a class="nav-link rounded pb-2 pt-2" href="#" data-target="users">
+							<i class="ri-user-line me-2 align-middle"></i> Users
+						</a>
+					</li>
+					<li class="nav-item mb-1">
+						<a class="nav-link rounded pb-2 pt-2" href="#" data-target="groups">
+							<i class="ri-group-line me-2 align-middle"></i> Groups
+						</a>
+					</li>
+					<li class="nav-item mb-1">
+						<a
+							class="nav-link rounded pb-2 pt-2"
+							href="#"
+							data-target="messages"
+						>
+							<i class="ri-message-2-line me-2 align-middle"></i> Messages
+						</a>
+					</li>
+					<li class="nav-item mt-4">
+						<a
+							class="nav-link rounded text-danger"
+							href="javascript:void(0);"
+							id="admin-logout-btn"
+						>
+							<i class="ri-logout-circle-line me-2 align-middle"></i> Logout
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- content -->
+			<div class="admin-content flex-grow-1 bg-light min-vh-100">
+				<div class="container-fluid">
+					<!-- DASHBOARD TAB -->
+					<div id="tab-dashboard" class="content-tab">
+						<div class="d-flex justify-content-between align-items-center mb-4">
+							<h4 class="mb-0">Dashboard Overview</h4>
+							<div class="text-muted">
+								<i class="ri-calendar-line me-1"></i>
+								<span id="current-date"></span>
+							</div>
+						</div>
+
+						<!-- Summary Cards -->
+						<div class="row mb-4">
+							<div class="col-xl-3 col-md-6">
+								<div
+									class="card stat-card bg-primary text-white overflow-hidden"
+								>
+									<div class="card-body">
+										<div class="d-flex align-items-center">
+											<div class="flex-grow-1">
+												<h6 class="text-white-50 mb-2">Total Users</h6>
+												<h3 class="mb-0 text-white" id="stat-users">0</h3>
+											</div>
+											<div class="stat-icon bg-white bg-opacity-25 text-white">
+												<i class="ri-user-smile-line"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div
+									class="card stat-card bg-success text-white overflow-hidden"
+								>
+									<div class="card-body">
+										<div class="d-flex align-items-center">
+											<div class="flex-grow-1">
+												<h6 class="text-white-50 mb-2">Total Groups</h6>
+												<h3 class="mb-0 text-white" id="stat-groups">0</h3>
+											</div>
+											<div class="stat-icon bg-white bg-opacity-25 text-white">
+												<i class="ri-group-line"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div
+									class="card stat-card bg-warning text-white overflow-hidden"
+								>
+									<div class="card-body">
+										<div class="d-flex align-items-center">
+											<div class="flex-grow-1">
+												<h6 class="text-white-50 mb-2">Total Messages</h6>
+												<h3 class="mb-0 text-white" id="stat-messages">0</h3>
+											</div>
+											<div class="stat-icon bg-white bg-opacity-25 text-white">
+												<i class="ri-message-3-line"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div class="card stat-card bg-info text-white overflow-hidden">
+									<div class="card-body">
+										<div class="d-flex align-items-center">
+											<div class="flex-grow-1">
+												<h6 class="text-white-50 mb-2">System Status</h6>
+												<h3 class="mb-0 text-white">Online</h3>
+											</div>
+											<div class="stat-icon bg-white bg-opacity-25 text-white">
+												<i class="ri-server-line"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Charts Row 1 -->
+						<div class="row mb-4">
+							<div class="col-xl-8">
+								<div class="card h-100 chart-card">
+									<div class="card-body">
+										<h5 class="card-title mb-3">User Growth</h5>
+										<div class="chart-container" style="height: 300px">
+											<canvas id="userGrowthChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4">
+								<div class="card h-100 chart-card">
+									<div class="card-body">
+										<h5 class="card-title mb-3">User Status</h5>
+										<div
+											class="chart-container"
+											style="
+												height: 300px;
+												display: flex;
+												justify-content: center;
+											"
+										>
+											<canvas id="userStatusChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Charts Row 2 -->
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="card h-100 chart-card">
+									<div class="card-body">
+										<h5 class="card-title mb-3">
+											Messages Activity (Last 7 Days)
+										</h5>
+										<div class="chart-container" style="height: 300px">
+											<canvas id="messageActivityChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="card h-100 chart-card">
+									<div class="card-body">
+										<h5 class="card-title mb-3">Groups Creation Trend</h5>
+										<div class="chart-container" style="height: 300px">
+											<canvas id="groupTrendChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- USERS TAB -->
+					<div id="tab-users" class="content-tab d-none">
+						<h4 class="mb-4">User Management</h4>
+						<div class="card border-0 shadow-none mb-0">
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table
+										class="table table-hover table-nowrap mb-0 align-middle"
+									>
+										<thead class="table-light">
+											<tr>
+												<th>User</th>
+												<th>Email</th>
+												<th>Role</th>
+												<th>Status</th>
+												<th>Joined At</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody id="users-table-body">
+											<!-- Dynamic Content -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- GROUPS TAB -->
+					<div id="tab-groups" class="content-tab d-none">
+						<h4 class="mb-4">Group Management</h4>
+						<div class="card border-0 shadow-none mb-0">
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table
+										class="table table-hover table-nowrap mb-0 align-middle"
+									>
+										<thead class="table-light">
+											<tr>
+												<th>Group Name</th>
+												<th>Creator</th>
+												<th>Members</th>
+												<th>Created At</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody id="groups-table-body">
+											<!-- Dynamic Content -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- MESSAGES TAB -->
+					<div id="tab-messages" class="content-tab d-none">
+						<h4 class="mb-4">Message Management</h4>
+						<div class="card border-0 shadow-none mb-0">
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table
+										class="table table-hover table-nowrap mb-0 align-middle"
+									>
+										<thead class="table-light">
+											<tr>
+												<th>Sender</th>
+												<th>Content</th>
+												<th>Type</th>
+												<th>Date</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody id="messages-table-body">
+											<!-- Dynamic Content -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Group Members Modal -->
+		<div
+			class="modal fade"
+			id="groupMembersModal"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Group Members</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<ul class="list-group list-group-flush" id="group-members-list">
+							<!-- Members go here -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../assets/libs/jquery/jquery.min.js"></script>
+		<script src="../../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Use type="module" to import TS (compiled to JS by Vite/build process) 
+         Use correct relative path to main module entry for admin 
+    -->
+		<script src="../../modules/admin/ts/admin.ts" type="module"></script>
+	</body>
+</html>

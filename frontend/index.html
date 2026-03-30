@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ChatZ | Connect Freely</title>
+		<!-- Remix Icons -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Landing CSS -->
+		<link rel="stylesheet" href="src/assets/css/landing.css" />
+	</head>
+	<body>
+		<!-- Circles Background -->
+		<div class="circle circle-1"></div>
+		<div class="circle circle-2"></div>
+
+		<nav class="navbar">
+			<a href="#" class="logo">
+				<i class="ri-chat-voice-fill"></i>
+				Chat<span>Z</span>
+			</a>
+			<div class="nav-links">
+				<a href="#features">Tính năng</a>
+				<a href="about.html">Giới thiệu</a>
+				<a href="#download">Tải ứng dụng</a>
+			</div>
+			<div class="nav-actions">
+				<button
+					id="theme-toggle-btn"
+					class="theme-toggle"
+					aria-label="Chuyển đổi chế độ Sáng/Tối"
+				>
+					<i id="theme-icon" class="ri-moon-line"></i>
+				</button>
+				<div
+					aria-label="Nút Đăng nhập"
+					tabindex="0"
+					role="button"
+					class="user-profile"
+				>
+					<a href="src/pages/client/auth-login.html" class="user-profile-inner">
+						<svg
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+						>
+							<g data-name="Layer 2" id="Layer_2">
+								<path
+									d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z"
+								></path>
+							</g>
+						</svg>
+						<p>Đăng ký</p>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="hero">
+			<div class="hero-content">
+				<h1>Kết nối với bạn bè,<br />mọi lúc, mọi nơi.</h1>
+				<p>
+					Trải nghiệm phong cách nhắn tin hiện đại cùng ChatZ. Trò chuyện liền
+					mạch, nhanh chóng và bảo mật trong một giao diện tuyệt đẹp.
+				</p>
+				<div style="display: flex; gap: 1rem; flex-wrap: wrap">
+					<a href="src/pages/client/auth-login.html" class="btn-primary"
+						>Bắt đầu ngay</a
+					>
+					<a
+						href="#features"
+						style="
+							padding: 0.8rem 1.5rem;
+							color: white;
+							text-decoration: none;
+							border: 1px solid rgba(255, 255, 255, 0.2);
+							border-radius: 50px;
+						"
+						>Tìm hiểu thêm</a
+					>
+				</div>
+			</div>
+
+			<div class="hero-visual">
+				<!-- Decorative Background Elements -->
+				<div class="visual-bg-circle bg-1"></div>
+				<div class="visual-bg-circle bg-2"></div>
+
+				<!-- Floating Elements -->
+				<div class="floating-badge badge-1">
+					<i class="ri-shield-check-fill"></i> an toàn 100%
+				</div>
+				<div class="floating-badge badge-2">
+					<i class="ri-user-smile-fill"></i> 2M+ Người dùng
+				</div>
+
+				<!-- Main 3D Card Container -->
+				<div class="glass-card-container">
+					<div class="glass-card main-chat">
+						<!-- Chat Header -->
+						<div class="chat-header">
+							<div class="user-info">
+								<div class="avatar">
+									<img
+										src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+										alt="User"
+									/>
+									<span class="status-dot online"></span>
+								</div>
+								<div class="details">
+									<h4>Nguyễn Lan</h4>
+									<span>Đang hoạt động</span>
+								</div>
+							</div>
+							<div class="header-actions">
+								<i class="ri-phone-fill"></i>
+								<i class="ri-vidicon-fill"></i>
+							</div>
+						</div>
+
+						<!-- Chat Body -->
+						<div class="chat-body">
+							<div class="message received">
+								<div class="bubble">
+									Chào bạn! Bạn đã thử giao diện mới của ChatZ chưa? 😍
+								</div>
+								<span class="time">10:42 AM</span>
+							</div>
+							<div class="message sent">
+								<div class="bubble">
+									Rồi cậu ơi! Nó siêu mượt và đẹp dã man luôn! 🔥
+								</div>
+								<span class="status"><i class="ri-check-double-line"></i></span>
+							</div>
+							<div class="message received">
+								<div class="bubble">
+									Thế tối nay call video test thử tính năng mới nhé?
+								</div>
+								<span class="time">10:45 AM</span>
+							</div>
+							<div class="typing-indicator">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+
+						<!-- Chat Input -->
+						<div class="chat-input">
+							<i class="ri-attachment-2"></i>
+							<div class="input-fake">Nhập tin nhắn...</div>
+							<div class="send-btn">
+								<i class="ri-send-plane-fill"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- Secondary Layered Card -->
+					<div class="glass-card incoming-call">
+						<div class="call-content">
+							<div class="caller-avatar">
+								<img
+									src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+									alt="Caller"
+								/>
+							</div>
+							<div class="caller-info">
+								<h5>Minh Tuấn</h5>
+								<span>Đang gọi đến...</span>
+							</div>
+							<div class="call-actions">
+								<button class="btn-decline">
+									<i class="ri-phone-fill"></i>
+								</button>
+								<button class="btn-accept">
+									<i class="ri-phone-fill"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="features" id="features">
+			<div class="section-header">
+				<h2>Tại sao chọn ChatZ?</h2>
+				<p style="color: var(--text-muted)">
+					Được xây dựng để kết nối liền mạch và bảo mật.
+				</p>
+			</div>
+
+			<div class="features-grid">
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="ri-lock-2-line"></i>
+					</div>
+					<h3 class="feature-title">Nhắn tin bảo mật</h3>
+					<p class="feature-desc">
+						Các cuộc trò chuyện của bạn hoàn toàn riêng tư và được bảo vệ. Chúng
+						tôi ưu tiên quyền riêng tư của bạn lên hàng đầu.
+					</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="ri-smartphone-line"></i>
+					</div>
+					<h3 class="feature-title">Thiết kế tương thích</h3>
+					<p class="feature-desc">
+						Hiển thị tuyệt đẹp trên mọi thiết bị. Dù bạn sử dụng điện thoại, máy
+						tính bảng hay máy tính để bàn.
+					</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="ri-group-line"></i>
+					</div>
+					<h3 class="feature-title">Trò chuyện nhóm</h3>
+					<p class="feature-desc">
+						Giữ liên lạc với gia đình, bạn bè và đồng nghiệp với các cuộc trò
+						chuyện nhóm dễ dàng quản lý.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Live Demo / Preview Section -->
+		<section class="live-demo" id="live-demo">
+			<div class="section-header">
+				<h2>Trải nghiệm ngay</h2>
+				<p style="color: var(--text-muted)">
+					Xem cách ChatZ giúp cuộc trò chuyện của bạn trở nên sống động.
+				</p>
+			</div>
+
+			<div class="demo-container">
+				<div class="demo-laptop">
+					<!-- Laptop Screen / Browser Window -->
+					<div class="laptop-screen">
+						<div class="browser-header">
+							<div class="browser-controls">
+								<span class="control red"></span>
+								<span class="control yellow"></span>
+								<span class="control green"></span>
+							</div>
+							<div class="browser-address-bar">
+								chatz.com/messages/phuong-thao
+							</div>
+						</div>
+
+						<div class="web-app-layout">
+							<!-- Sidebar (Friends List) -->
+							<div class="web-sidebar">
+								<div class="sidebar-header">
+									<i class="ri-search-line"></i>
+									<input type="text" placeholder="Tìm kiếm..." />
+								</div>
+								<div class="sidebar-list">
+									<div class="sidebar-item active">
+										<div class="item-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+												alt="User"
+											/>
+											<span class="status-dot online"></span>
+										</div>
+										<div class="item-info">
+											<h4>Phương Thảo</h4>
+											<p>Okela, hẹn gặp cậu ở đó! ❤️</p>
+										</div>
+									</div>
+									<div class="sidebar-item">
+										<div class="item-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&q=80"
+												alt="User"
+											/>
+										</div>
+										<div class="item-info">
+											<h4>Hoàng Minh</h4>
+											<p>Cuối tuần này đi đá bóng nhé?</p>
+										</div>
+									</div>
+									<div class="sidebar-item">
+										<div class="item-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+												alt="User"
+											/>
+											<span class="status-dot online"></span>
+										</div>
+										<div class="item-info">
+											<h4>Lan Anh</h4>
+											<p>Đã gửi 5 ảnh</p>
+										</div>
+									</div>
+									<div class="sidebar-item">
+										<div class="item-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&q=80"
+												alt="User"
+											/>
+										</div>
+										<div class="item-info">
+											<h4>Minh Béo</h4>
+											<p>Cuối tuần này đi đá bóng nhé?</p>
+										</div>
+									</div>
+									<div class="sidebar-item">
+										<div class="item-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+												alt="User"
+											/>
+											<span class="status-dot online"></span>
+										</div>
+										<div class="item-info">
+											<h4>Thanh Hà</h4>
+											<p>Mai gặp nhau nhé!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Main Chat Area -->
+							<div class="web-main-chat">
+								<!-- Demo Chat Header -->
+								<div class="demo-header">
+									<div class="demo-user-info">
+										<div class="demo-avatar">
+											<img
+												src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+												alt="Demo User"
+											/>
+											<span class="status-dot online"></span>
+										</div>
+										<div class="demo-details">
+											<h4>Phương Thảo</h4>
+											<span id="demo-status-text">Đang hoạt động</span>
+										</div>
+									</div>
+									<div class="demo-header-actions">
+										<i class="ri-phone-fill"></i>
+										<i class="ri-vidicon-fill"></i>
+										<i class="ri-layout-right-line"></i>
+									</div>
+								</div>
+
+								<!-- Demo Chat Area -->
+								<div class="demo-chat-body" id="demo-chat-body">
+									<!-- Initial Messages will be populated by JS -->
+								</div>
+
+								<!-- Demo Chat Input -->
+								<div class="demo-chat-input">
+									<i class="ri-add-circle-fill"></i>
+									<i class="ri-image-fill"></i>
+									<div class="demo-input-field">Nhập tin nhắn...</div>
+									<i class="ri-emotion-happy-line"></i>
+									<div class="demo-send-btn">
+										<i class="ri-send-plane-fill"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Laptop Base -->
+					<div class="laptop-base" style="display: none"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Statistics Section -->
+		<section class="stats" id="stats">
+			<div class="stats-container">
+				<div class="stat-item active-users">
+					<div class="stat-header">
+						<div class="avatar-stack">
+							<img
+								src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80"
+								alt="User 1"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&q=80"
+								alt="User 2"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&q=80"
+								alt="User 3"
+							/>
+							<div class="avatar-count">+2M</div>
+						</div>
+					</div>
+					<h3 class="stat-number" data-target="10000">0</h3>
+					<p class="stat-label">Người dùng hoạt động</p>
+				</div>
+				<div class="stat-item">
+					<div class="stat-icon-wrapper">
+						<i class="ri-chat-smile-2-fill"></i>
+					</div>
+					<h3 class="stat-number" data-target="5000000">0</h3>
+					<p class="stat-label">Tin nhắn đã gửi</p>
+				</div>
+				<div class="stat-item">
+					<div class="stat-header">
+						<div class="avatar-stack">
+							<img src="https://flagcdn.com/w80/vn.png" alt="Vietnam" />
+							<img src="https://flagcdn.com/w80/kr.png" alt="South Korea" />
+							<img src="https://flagcdn.com/w80/jp.png" alt="Japan" />
+							<div class="avatar-count">+20</div>
+						</div>
+					</div>
+					<h3 class="stat-number" data-target="150">0</h3>
+					<p class="stat-label">Quốc gia</p>
+				</div>
+				<div class="stat-item">
+					<div class="stat-icon-wrapper">
+						<i class="ri-server-fill"></i>
+					</div>
+					<h3 class="stat-number" data-target="99">0</h3>
+					<p class="stat-label">Thời gian hoạt động (%)</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact-section" id="contact">
+			<div class="contact-container">
+				<div class="contact-content">
+					<h2>Liên hệ với chúng tôi</h2>
+					<p>
+						Bạn có câu hỏi hoặc cần hỗ trợ? Đội ngũ của chúng tôi luôn sẵn sàng
+						giúp đỡ bạn 24/7.
+					</p>
+					<div class="contact-grid">
+						<div class="contact-card">
+							<div class="contact-icon">
+								<i class="ri-map-pin-line"></i>
+							</div>
+							<h3>Địa chỉ</h3>
+							<p>Thành phố Hồ Chí Minh, Việt Nam</p>
+						</div>
+						<div class="contact-card">
+							<div class="contact-icon">
+								<i class="ri-mail-line"></i>
+							</div>
+							<h3>Email</h3>
+							<p>khoinguyen@chatz.com</p>
+						</div>
+						<div class="contact-card">
+							<div class="contact-icon">
+								<i class="ri-phone-line"></i>
+							</div>
+							<h3>Hotline</h3>
+							<p>+84 909 090 909</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-col">
+					<a href="#" class="logo mb-4">
+						<i class="ri-chat-voice-fill"></i>
+						Chat<span>Z</span>
+					</a>
+					<p class="footer-desc">
+						ChatZ là tương lai của giao tiếp an toàn và liền mạch. Kết nối với
+						bất kỳ ai, ở đâu, vào bất kỳ lúc nào mà không ảnh hưởng đến quyền
+						riêng tư của bạn.
+					</p>
+					<div class="social-links">
+						<a href="#"><i class="ri-facebook-fill"></i></a>
+						<a href="#"><i class="ri-twitter-fill"></i></a>
+						<a href="#"><i class="ri-instagram-fill"></i></a>
+						<a href="#"><i class="ri-linkedin-fill"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-col">
+					<h4>Sản phẩm</h4>
+					<ul>
+						<li><a href="#features">Tính năng</a></li>
+						<li><a href="#live-demo">Xem trước</a></li>
+						<li><a href="#">Chat trên Web</a></li>
+						<li><a href="#">Bảo mật & Riêng tư</a></li>
+						<li><a href="#">Dành cho Doanh nghiệp</a></li>
+						<li><a href="#">Tích hợp API</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Hỗ trợ</h4>
+					<ul>
+						<li><a href="#">Trung tâm trợ giúp</a></li>
+						<li><a href="#">Báo cáo sự cố</a></li>
+						<li><a href="#">Tài khoản của tôi</a></li>
+						<li><a href="#">Quên mật khẩu</a></li>
+						<li><a href="#">Trạng thái hệ thống</a></li>
+						<li><a href="#">Liên hệ hỗ trợ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Công ty</h4>
+					<ul>
+						<li><a href="about.html">Về chúng tôi</a></li>
+						<li><a href="#">Nghề nghiệp</a></li>
+						<li><a href="#">Blog tin tức</a></li>
+						<li><a href="#">Đối tác</a></li>
+						<li><a href="#">Chính sách quyền riêng tư</a></li>
+						<li><a href="#">Điều khoản dịch vụ</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col contact-col">
+					<h4>Giữ liên lạc</h4>
+					<p class="footer-text-sm">
+						Đăng ký để nhận tin tức cập nhật mới nhất từ ChatZ.
+					</p>
+					<form class="footer-newsletter">
+						<input type="email" placeholder="Email của bạn..." required />
+						<button type="submit"><i class="ri-send-plane-fill"></i></button>
+					</form>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					&copy; 2026 ChatZ. Đã đăng ký bản quyền. Thiết kế với
+					<i class="ri-heart-fill" style="color: #f84646"></i> bởi Team ChatZ.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Theme Logic -->
+		<script type="module" src="/src/modules/landing.ts"></script>
+	</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Log In | Chatvia - Responsive Bootstrap 5 Chat App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="Responsive Bootstrap 5 Chat App" name="description" />
+		<meta content="Themesbrand" name="author" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!-- App favicon -->
+		<link rel="shortcut icon" href="../../../assets/images/favicon.ico" />
+
+		<!-- Bootstrap Css -->
+		<link
+			href="../../../assets/css/bootstrap.min.css"
+			id="bootstrap-style"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<!-- Icons Css -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"
+			rel="stylesheet"
+		/>
+		<!-- App Css-->
+		<link
+			href="../../../assets/css/app.min.css"
+			id="app-style"
+			rel="stylesheet"
+			type="text/css"
+		/>
+	</head>
+
+	<body>
+		<div class="account-pages my-5 pt-sm-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-6 col-xl-5">
+						<div class="text-center mb-4">
+							<a href="../../../index.html" class="auth-logo mb-5 d-block">
+								<img
+									src="../../../assets/images/logo-dark.png"
+									alt=""
+									height="30"
+									class="logo logo-dark"
+								/>
+								<img
+									src="../../../assets/images/logo-light.png"
+									alt=""
+									height="30"
+									class="logo logo-light"
+								/>
+							</a>
+
+							<h4>Sign in / Sign up</h4>
+							<p class="text-muted mb-4">Get your free Chatvia account now.</p>
+						</div>
+
+						<div class="card">
+							<div class="card-body p-4">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs nav-justified mb-3" role="tablist">
+									<li class="nav-item">
+										<a
+											class="nav-link active"
+											data-bs-toggle="tab"
+											href="#login"
+											role="tab"
+											id="login-tab-btn"
+										>
+											Sign In
+										</a>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link"
+											data-bs-toggle="tab"
+											href="#signup"
+											role="tab"
+										>
+											Sign Up
+										</a>
+									</li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content text-muted p-2">
+									<!-- Login Tab -->
+									<div class="tab-pane active" id="login" role="tabpanel">
+										<form action="../../../index.html">
+											<div class="mb-3">
+												<label class="form-label" for="username"
+													>Username</label
+												>
+												<div class="input-group bg-soft-light rounded-3">
+													<span
+														class="input-group-text text-muted"
+														id="basic-addon3"
+													>
+														<i class="ri-user-2-line"></i>
+													</span>
+													<input
+														type="text"
+														class="form-control form-control-lg border-light bg-soft-light"
+														id="login-username"
+														placeholder="Enter Username"
+														aria-label="Enter Username"
+														aria-describedby="basic-addon3"
+													/>
+												</div>
+												<small data-error="username"></small>
+											</div>
+
+											<div class="mb-4">
+												<div class="float-end">
+													<a
+														href="../../../auth-recoverpw.html"
+														class="text-muted font-size-13"
+														>Forgot password?</a
+													>
+												</div>
+												<label class="form-label" for="userpassword"
+													>Password</label
+												>
+												<div class="input-group bg-soft-light rounded-3">
+													<span
+														class="input-group-text text-muted"
+														id="basic-addon4"
+													>
+														<i class="ri-lock-2-line"></i>
+													</span>
+													<input
+														type="password"
+														class="form-control form-control-lg border-light bg-soft-light"
+														id="login-password"
+														placeholder="Enter Password"
+														aria-label="Enter Password"
+														aria-describedby="basic-addon4"
+													/>
+												</div>
+												<small data-error="password"></small>
+											</div>
+
+											<div class="form-check mb-4">
+												<input
+													type="checkbox"
+													class="form-check-input"
+													id="remember-check"
+												/>
+												<label class="form-check-label" for="remember-check"
+													>Remember me</label
+												>
+											</div>
+
+											<div class="d-grid">
+												<button
+													class="btn btn-primary waves-effect waves-light"
+													type="button"
+													id="btn-login"
+												>
+													Sign in
+												</button>
+											</div>
+										</form>
+									</div>
+
+									<!-- Signup Tab -->
+									<div class="tab-pane" id="signup" role="tabpanel">
+										<form action="../../modules/client/ts/auth.ts">
+											<div class="d-flex gap-3">
+												<div>
+													<label class="form-label" for="useremail"
+														>First Name</label
+													>
+													<div class="input-group mb-3 bg-soft-light rounded-3">
+														<span
+															class="input-group-text border-light text-muted"
+															id="basic-addon5"
+														>
+															<i class="ri-user-line"></i>
+														</span>
+														<input
+															type="text"
+																class="form-control form-control-lg bg-soft-light border-light"
+															id="signup-firstname"
+															placeholder="Enter First Name"
+															aria-label="Enter First Name"
+															aria-describedby="basic-addon5"
+														/>
+													</div>
+													<small data-error="firstname"></small>
+												</div>
+												<div>
+													<label class="form-label" for="useremail"
+														>Last Name</label
+													>
+													<div class="input-group mb-3 bg-soft-light rounded-3">
+														<span
+															class="input-group-text border-light text-muted"
+															id="basic-addon5"
+														>
+															<i class="ri-user-line"></i>
+														</span>
+														<input
+															type="text"
+															class="form-control form-control-lg bg-soft-light border-light"
+															id="signup-lastname"
+															placeholder="Enter Last Name"
+															aria-label="Enter Last Name"
+															aria-describedby="basic-addon5"
+														/>
+														
+													</div>
+													<small data-error="lastname"></small>
+												</div>
+											</div>
+											<div class="mb-3">
+												<label class="form-label" for="useremail">Email</label>
+												<div class="input-group mb-3 bg-soft-light rounded-3">
+													<span
+														class="input-group-text border-light text-muted"
+														id="basic-addon5"
+													>
+														<i class="ri-mail-line"></i>
+													</span>
+													<input
+														type="email"
+														class="form-control form-control-lg bg-soft-light border-light"
+														id="signup-email"
+														placeholder="Enter Email"
+														aria-label="Enter Email"
+														aria-describedby="basic-addon5"
+													/>
+												</div>
+												<small data-error="email"></small>
+											</div>
+
+											<div class="mb-3">
+												<label class="form-label" for="username"
+													>Username</label
+												>
+												<div class="input-group mb-3 bg-soft-light rounded-3">
+													<span
+														class="input-group-text border-light text-muted"
+														id="basic-addon6"
+													>
+														<i class="ri-user-2-line"></i>
+													</span>
+													<input
+														type="text"
+														class="form-control form-control-lg bg-soft-light border-light"
+														id="signup-username"
+														placeholder="Enter Username"
+														aria-label="Enter Username"
+														aria-describedby="basic-addon6"
+													/>
+												</div>
+												<small data-error="username"></small>
+											</div>
+
+											<div class="mb-4">
+												<label class="form-label" for="userpassword"
+													>Password</label
+												>
+												<div class="input-group mb-3 bg-soft-light rounded-3">
+													<span
+														class="input-group-text border-light text-muted"
+														id="basic-addon7"
+													>
+														<i class="ri-lock-2-line"></i>
+													</span>
+													<input
+														type="password"
+														class="form-control form-control-lg bg-soft-light border-light"
+														id="signup-password"
+														placeholder="Enter Password"
+														aria-label="Enter Password"
+														aria-describedby="basic-addon7"
+													/>
+												</div>
+												<small data-error="password"></small>
+											</div>
+
+											<div class="mb-4">
+												<label class="form-label" for="confirm-password"
+													>Confirm Password</label
+												>
+												<div class="input-group mb-3 bg-soft-light rounded-3">
+													<span
+														class="input-group-text border-light text-muted"
+														id="basic-addon8"
+													>
+														<i class="ri-lock-2-line"></i>
+													</span>
+													<input
+														type="password"
+														class="form-control form-control-lg bg-soft-light border-light"
+														id="signup-confirm-password"
+														placeholder="Confirm Password"
+														aria-label="Confirm Password"
+														aria-describedby="basic-addon8"
+													/>
+												</div>
+												<small data-error="confirm-password"></small>
+											</div>
+
+											<div class="d-grid">
+												<button
+													class="btn btn-primary waves-effect waves-light"
+													type="button"
+													id="btn-signup"
+												>
+													Sign up
+												</button>
+											</div>
+
+											<!-- <div class="mt-4 text-center">
+												<p class="mb-0">
+													By registering you agree to the Chatvia
+													<a href="#" class="text-primary">Terms of Use</a>
+												</p>
+											</div> -->
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="mt-5 text-center">
+							<p>
+								©
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								Chatvia. Crafted with
+								<i class="mdi mdi-heart text-danger"></i> by Themesbrand
+							</p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end account-pages -->
+
+		<!-- JAVASCRIPT -->
+		<script src="../../../assets/libs/jquery/jquery.min.js"></script>
+		<script src="../../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../../../assets/libs/simplebar/simplebar.min.js"></script>
+		<script src="../../../assets/libs/node-waves/waves.min.js"></script>
+
+		<!-- Axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="../../../assets/js/app.js"></script>
+
+		<script src="../../modules/client/ts/auth.ts" type="module"></script>
+	</body>
+</html>

@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "b3e04e9c-1234-5678-9abc-def012345678",
+		"name": "Chatz API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\",\n    \"email\": \"test@example.com\",\n    \"firstname\": \"Test\",\n    \"lastname\": \"User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/signup",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "auth", "signup"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/signin",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "auth", "signin"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/signout",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "auth", "signout"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/refresh",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "auth", "refresh"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/me",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "users", "me"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/search?query=test",
+							"query": [
+								{
+									"key": "query",
+									"value": "test"
+								}
+							],
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "users", "search"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friends",
+			"item": [
+				{
+					"name": "Send Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\": \"RECIPIENT_USER_ID\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/friends/request",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends", "request"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Friend Requests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/friends/requests",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends", "requests"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/friends/request/:requestId/accept",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends", "request", ":requestId", "accept"],
+							"variable": [
+								{
+									"key": "requestId",
+									"value": "REQUEST_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/friends/request/:requestId/reject",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends", "request", ":requestId", "reject"],
+							"variable": [
+								{
+									"key": "requestId",
+									"value": "REQUEST_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Friends List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/friends",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfriend",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/friends/:friendId",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "friends", ":friendId"],
+							"variable": [
+								{
+									"key": "friendId",
+									"value": "FRIEND_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Send Message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipientId\": \"RECIPIENT_ID_OR_NULL\",\n    \"conversationId\": \"CONVERSATION_ID_OR_NULL\",\n    \"content\": \"Hello!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/messages",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Message with File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "content",
+									"value": "Check this out!",
+									"type": "text"
+								},
+								{
+									"key": "recipientId",
+									"value": "RECIPIENT_ID",
+									"type": "text"
+								},
+								{
+									"key": "conversationId",
+									"value": "CONVERSATION_ID",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/messages",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conversations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/messages/conversations",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages", "conversations"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pending Conversations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/messages/conversations?type=pending",
+							"query": [
+								{
+									"key": "type",
+									"value": "pending"
+								}
+							],
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages", "conversations"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Messages in Conversation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/messages/:conversationId",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages", ":conversationId"],
+							"variable": [
+								{
+									"key": "conversationId",
+									"value": "CONVERSATION_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reactions",
+			"item": [
+				{
+					"name": "React to Message",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reactionType\": \"like\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/messages/:messageId/react",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages", ":messageId", "react"],
+							"variable": [
+								{
+									"key": "messageId",
+									"value": "MESSAGE_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke Message",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/messages/:messageId/revoke",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "messages", ":messageId", "revoke"],
+							"variable": [
+								{
+									"key": "messageId",
+									"value": "MESSAGE_ID_here"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5001",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": "PASTE_YOUR_ACCESS_TOKEN_HERE",
+			"type": "string"
+		}
+	]
+}

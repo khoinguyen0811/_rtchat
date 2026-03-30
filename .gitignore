@@ -1,0 +1,39 @@
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Environment Variables (QUAN TRỌNG: không push .env) ===
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# === Build output ===
+dist/
+build/
+out/
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Logs ===
+*.log
+error.log
+logs/
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Editor ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
